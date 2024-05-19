@@ -1,20 +1,29 @@
 import time
 from plyer import notification
+import pygame
 
 def remind_to_drink_water(interval_minutes):
     """
-    Sends a notification to remind the user to drink water at specified intervals.
+    Sends a notification with sound to remind the user to drink water at specified intervals.
     
     Parameters:
     interval_minutes (int): The interval in minutes at which reminders should be sent.
     """
+    # Initialize pygame mixer for sound
+    pygame.mixer.init()
+    
     while True:
         # Send a notification reminding the user to drink water
         notification.notify(
             title="Hydration Reminder",
             message="It's time to drink water!",
-            timeout=10  # Notification stays on screen for 10 seconds
+            timeout=20  # Notification stays on screen for 20 seconds
         )
+        
+        # Play the sound notification
+        pygame.mixer.music.load("notification_sound.mp3")  # Replace "notification_sound.mp3" with your sound file
+        pygame.mixer.music.play()
+        
         # Wait for the specified interval before sending the next reminder
         time.sleep(interval_minutes * 60)
 

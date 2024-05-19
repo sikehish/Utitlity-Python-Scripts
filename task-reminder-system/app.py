@@ -1,6 +1,7 @@
 import time
 from datetime import datetime
 from plyer import notification
+import pygame
 
 def input_task():
     """
@@ -69,11 +70,24 @@ def send_notification(task_desc):
     Parameters:
     task_desc (str): The description of the task.
     """
+    # Initialize pygame mixer for sound
+    pygame.mixer.init()
+
     notification.notify(
         title="Task Reminder",
         message=f"Time to: {task_desc}",
         timeout=10  # Notification stays on screen for 10 seconds
     )
+
+    # Play the sound notification
+    pygame.mixer.music.load("reminder_finish_task.mp3")  # Replace "reminder_finish_task.mp3" with your sound file
+    # # OR
+    # pygame.mixer.music.load("reminder_sound.mp3")
+
+    pygame.mixer.music.play()
+
+    time.sleep(10)
+        
 
 def main():
     """
