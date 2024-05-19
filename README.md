@@ -43,7 +43,7 @@ Make sure you have Python installed on your system. You can download it from [py
 1. Clone the repository:
 
 ```sh
-git clone https://github.com/yourusername/Utility-Python-Scripts.git
+git clone https://github.com/sikehish/Utility-Python-Scripts.git
 cd Utility-Python-Scripts
 ```
 
