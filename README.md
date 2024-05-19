@@ -10,7 +10,7 @@ Welcome to the Utility Python Scripts repository! This repository contains vario
 ├── copy-file
 │   └── app.py
 |   └── demo.txt
-│   └── copied.py
+│   └── copied.txt
 ├── hydration-reminder
 │   └── app.py
 │   └── notification_sound.mp3
