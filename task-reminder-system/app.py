@@ -1,6 +1,10 @@
 import time
 from datetime import datetime
 from plyer import notification
+
+from os import environ
+environ['PYGAME_HIDE_SUPPORT_PROMPT'] = '1'
+
 import pygame
 
 def input_task():
